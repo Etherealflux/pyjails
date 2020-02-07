@@ -9,7 +9,7 @@ print("Welcome to your doom!!!")
 print()
 print("Protections:")
 print("I deleted __import__ from __builtins__ (but I made a backup...)")
-print("You're not allowed to say \"locals\" or \"globals\"")
+print("You're not allowed to say \"vars\", \"locals\", or \"globals\"")
 print("eval() instad of exec()")
 print()
 
@@ -20,7 +20,7 @@ del __builtins__.__import__
 while True:
     try:
         cmd = input(">>> ")
-        if "locals" in cmd or "globals" in cmd:
+        if "vars" in cmd.lower() or "locals" in cmd.lower() or "globals" in cmd.lower():
             print("NO!")
         else:
             print(eval(cmd))

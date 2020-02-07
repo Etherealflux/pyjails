@@ -4,21 +4,28 @@ import readline
 import re
 from jail import intro
 
-print(intro(7))
+import os
+
+def escape(key):
+    if key == "swordfish":
+        os.system("sh")
+    else:
+        print("NOPE!")
+
+del os
+
+print(intro(8))
 
 print("Welcome to your doom!!!")
 print()
 print("Protections:")
-print("I will only accept 16 bytes of input at a time.")
+print("I'll let you out if you call escape() with the key!")
 print()
 
 while True:
     try:
         cmd = input(">>> ")
-        if len(cmd) > 16
-            print("NO!")
-        else:
-            print(eval(cmd))
+        print(eval(cmd))
     except EOFError:
         exit()
     except Exception as e:

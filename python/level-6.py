@@ -9,13 +9,14 @@ print(intro(6))
 print("Welcome to your doom!!!")
 print()
 print("Protections:")
-print("This is a calculator. You cannot use letters.")
+print("I will only accept 16 bytes of input at a time.")
+print("eval() instead of exec()")
 print()
 
 while True:
     try:
         cmd = input(">>> ")
-        if re.match(".*[a-zA-Z].*", cmd):
+        if len(cmd) > 24:
             print("NO!")
         else:
             print(eval(cmd))

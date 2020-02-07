@@ -10,7 +10,8 @@ print("Welcome to your doom!!!")
 print()
 print("Protections:")
 print("I do not like strings. You may not type \" or '")
-print()
+print("eval() instead of exec()")
+print() 
 
 while True:
     try:
